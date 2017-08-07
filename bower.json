@@ -1,6 +1,6 @@
 {
   "name": "phlat",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Flatten arrays, preserve structure.",
   "main": "phlat.deploy.js",
   "support": "phlat.support.js",
@@ -26,8 +26,8 @@
     "tests"
   ],
   "dependencies": {
-    "arid": "^0.26.0",
-    "doubt": "^0.27.0",
-    "raze": "^0.30.0"
+    "arid": "^0.30.0",
+    "doubt": "^0.34.0",
+    "raze": "^0.34.0"
   }
 }
