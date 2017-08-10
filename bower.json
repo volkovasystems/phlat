@@ -1,33 +1,28 @@
 {
-  "name": "phlat",
-  "version": "0.2.0",
-  "description": "Flatten arrays, preserve structure.",
-  "main": "phlat.deploy.js",
-  "support": "phlat.support.js",
-  "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "flatten",
-    "arrays",
-    "preserve",
-    "structure",
-    "phlat"
-  ],
-  "homepage": "https://github.com/volkovasystems/phlat",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "arid": "^0.30.0",
-    "doubt": "^0.34.0",
-    "raze": "^0.34.0"
-  }
+	"name": "phlat",
+	"version": "0.2.0",
+	"description": "Flatten arrays, preserve structure.",
+	"main": "phlat.deploy.js",
+	"support": "phlat.support.js",
+	"authors": [
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"flatten",
+		"arrays",
+		"preserve",
+		"structure",
+		"phlat"
+	],
+	"homepage": "https://github.com/volkovasystems/phlat",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
 }
