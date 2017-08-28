@@ -1,0 +1,180 @@
+{
+	"state": {
+		"passed": 4,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-08-28T05:06:50.809Z",
+	"end": "2017-08-28T05:07:28.652Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "phlat",
+			"duration": 0,
+			"start": "2017-08-28T05:07:28.175Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "phlat",
+			"duration": 299,
+			"start": "2017-08-28T05:07:28.175Z",
+			"end": "2017-08-28T05:07:28.474Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-08-28T05:07:28.178Z",
+					"end": "2017-08-28T05:07:28.178Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "phlat",
+					"associatedTest": "should be equal to empty array"
+				},
+				{
+					"start": "2017-08-28T05:07:28.297Z",
+					"end": "2017-08-28T05:07:28.297Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "phlat",
+					"associatedTest": "should be equal to empty array"
+				},
+				{
+					"start": "2017-08-28T05:07:28.298Z",
+					"end": "2017-08-28T05:07:28.299Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "phlat",
+					"associatedTest": "should be equal to empty array"
+				},
+				{
+					"start": "2017-08-28T05:07:28.357Z",
+					"end": "2017-08-28T05:07:28.357Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "phlat",
+					"associatedTest": "should be equal to empty array"
+				},
+				{
+					"start": "2017-08-28T05:07:28.358Z",
+					"end": "2017-08-28T05:07:28.358Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "phlat",
+					"associatedTest": "should be equal to [ 1, 2, 3, 4, 5, 6 ]"
+				},
+				{
+					"start": "2017-08-28T05:07:28.414Z",
+					"end": "2017-08-28T05:07:28.415Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "phlat",
+					"associatedTest": "should be equal to [ 1, 2, 3, 4, 5, 6 ]"
+				},
+				{
+					"start": "2017-08-28T05:07:28.416Z",
+					"end": "2017-08-28T05:07:28.416Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "phlat",
+					"associatedTest": "should be equal to [ 1, 2, 3, 4, 5, 6, null ]"
+				},
+				{
+					"start": "2017-08-28T05:07:28.474Z",
+					"end": "2017-08-28T05:07:28.474Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "phlat",
+					"associatedTest": "should be equal to [ 1, 2, 3, 4, 5, 6, null ]"
+				},
+				{
+					"start": "2017-08-28T05:07:28.474Z",
+					"end": "2017-08-28T05:07:28.475Z",
+					"duration": 1,
+					"title": "\"after all\" hook",
+					"associatedSuite": "phlat"
+				}
+			]
+		},
+		{
+			"name": "`phlat( )`",
+			"duration": 122,
+			"start": "2017-08-28T05:07:28.176Z",
+			"end": "2017-08-28T05:07:28.298Z",
+			"tests": [
+				{
+					"name": "should be equal to empty array",
+					"start": "2017-08-28T05:07:28.177Z",
+					"end": "2017-08-28T05:07:28.297Z",
+					"duration": 120,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`phlat( [ ] )`",
+			"duration": 59,
+			"start": "2017-08-28T05:07:28.298Z",
+			"end": "2017-08-28T05:07:28.357Z",
+			"tests": [
+				{
+					"name": "should be equal to empty array",
+					"start": "2017-08-28T05:07:28.298Z",
+					"end": "2017-08-28T05:07:28.357Z",
+					"duration": 59,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`phlat( [ 1, 2, 3, [ 4, 5, 6 ] ] )`",
+			"duration": 57,
+			"start": "2017-08-28T05:07:28.358Z",
+			"end": "2017-08-28T05:07:28.415Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 1, 2, 3, 4, 5, 6 ]",
+					"start": "2017-08-28T05:07:28.358Z",
+					"end": "2017-08-28T05:07:28.414Z",
+					"duration": 56,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`phlat( [ 1, 2, 3, [ 4, 5, 6 ], [ [ [ null ] ] ] ] )`",
+			"duration": 59,
+			"start": "2017-08-28T05:07:28.415Z",
+			"end": "2017-08-28T05:07:28.474Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 1, 2, 3, 4, 5, 6, null ]",
+					"start": "2017-08-28T05:07:28.416Z",
+					"end": "2017-08-28T05:07:28.474Z",
+					"duration": 58,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}

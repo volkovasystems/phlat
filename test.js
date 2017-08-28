@@ -66,6 +66,39 @@ const phlat = require( "./phlat.js" );
 
 describe( "phlat", ( ) => {
 
+	describe( "`phlat( )`", ( ) => {
+		it( "should be equal to empty array", ( ) => {
+
+			assert.deepEqual( phlat( ), [ ] );
+
+		} );
+	} );
+
+	describe( "`phlat( [ ] )`", ( ) => {
+		it( "should be equal to empty array", ( ) => {
+
+			assert.deepEqual( phlat( [ ] ), [ ] );
+
+		} );
+	} );
+
+	describe( "`phlat( [ 1, 2, 3, [ 4, 5, 6 ] ] )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, 5, 6 ]", ( ) => {
+
+			assert.deepEqual( phlat( [ 1, 2, 3, [ 4, 5, 6 ] ] ), [ 1, 2, 3, 4, 5, 6 ] );
+
+		} );
+	} );
+
+	describe( "`phlat( [ 1, 2, 3, [ 4, 5, 6 ], [ [ [ null ] ] ] ] )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, 5, 6, null ]", ( ) => {
+
+			assert.deepEqual( phlat( [ 1, 2, 3, [ 4, 5, 6 ], [ [ [ null ] ] ] ] ),
+				[ 1, 2, 3, 4, 5, 6, null ] );
+
+		} );
+	} );
+
 } );
 
 //: @end-server

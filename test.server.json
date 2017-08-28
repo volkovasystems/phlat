@@ -1,16 +1,74 @@
 {
-  "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-08-10T12:26:15.079Z",
-    "end": "2017-08-10T12:26:15.080Z",
-    "duration": 1
-  },
-  "tests": [],
-  "pending": [],
-  "failures": [],
-  "passes": []
+	"stats": {
+		"suites": 5,
+		"tests": 4,
+		"passes": 4,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-08-28T05:06:49.452Z",
+		"end": "2017-08-28T05:06:49.461Z",
+		"duration": 9
+	},
+	"tests": [
+		{
+			"title": "should be equal to empty array",
+			"fullTitle": "phlat `phlat( )` should be equal to empty array",
+			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to empty array",
+			"fullTitle": "phlat `phlat( [ ] )` should be equal to empty array",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 1, 2, 3, 4, 5, 6 ]",
+			"fullTitle": "phlat `phlat( [ 1, 2, 3, [ 4, 5, 6 ] ] )` should be equal to [ 1, 2, 3, 4, 5, 6 ]",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 1, 2, 3, 4, 5, 6, null ]",
+			"fullTitle": "phlat `phlat( [ 1, 2, 3, [ 4, 5, 6 ], [ [ [ null ] ] ] ] )` should be equal to [ 1, 2, 3, 4, 5, 6, null ]",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should be equal to empty array",
+			"fullTitle": "phlat `phlat( )` should be equal to empty array",
+			"duration": 2,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to empty array",
+			"fullTitle": "phlat `phlat( [ ] )` should be equal to empty array",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 1, 2, 3, 4, 5, 6 ]",
+			"fullTitle": "phlat `phlat( [ 1, 2, 3, [ 4, 5, 6 ] ] )` should be equal to [ 1, 2, 3, 4, 5, 6 ]",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 1, 2, 3, 4, 5, 6, null ]",
+			"fullTitle": "phlat `phlat( [ 1, 2, 3, [ 4, 5, 6 ], [ [ [ null ] ] ] ] )` should be equal to [ 1, 2, 3, 4, 5, 6, null ]",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }

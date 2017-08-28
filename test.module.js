@@ -70,6 +70,39 @@ const path = require( "path" );
 
 describe( "phlat", ( ) => {
 
+	describe( "`phlat( )`", ( ) => {
+		it( "should be equal to empty array", ( ) => {
+
+			assert.deepEqual( phlat( ), [ ] );
+
+		} );
+	} );
+
+	describe( "`phlat( [ ] )`", ( ) => {
+		it( "should be equal to empty array", ( ) => {
+
+			assert.deepEqual( phlat( [ ] ), [ ] );
+
+		} );
+	} );
+
+	describe( "`phlat( [ 1, 2, 3, [ 4, 5, 6 ] ] )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, 5, 6 ]", ( ) => {
+
+			assert.deepEqual( phlat( [ 1, 2, 3, [ 4, 5, 6 ] ] ), [ 1, 2, 3, 4, 5, 6 ] );
+
+		} );
+	} );
+
+	describe( "`phlat( [ 1, 2, 3, [ 4, 5, 6 ], [ [ [ null ] ] ] ] )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, 5, 6, null ]", ( ) => {
+
+			assert.deepEqual( phlat( [ 1, 2, 3, [ 4, 5, 6 ], [ [ [ null ] ] ] ] ),
+				[ 1, 2, 3, 4, 5, 6, null ] );
+
+		} );
+	} );
+
 } );
 
 //: @end-server
@@ -78,6 +111,40 @@ describe( "phlat", ( ) => {
 //: @client:
 
 describe( "phlat", ( ) => {
+
+	describe( "`phlat( )`", ( ) => {
+		it( "should be equal to empty array", ( ) => {
+
+			assert.deepEqual( phlat( ), [ ] );
+
+		} );
+	} );
+
+	describe( "`phlat( [ ] )`", ( ) => {
+		it( "should be equal to empty array", ( ) => {
+
+			assert.deepEqual( phlat( [ ] ), [ ] );
+
+		} );
+	} );
+
+	describe( "`phlat( [ 1, 2, 3, [ 4, 5, 6 ] ] )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, 5, 6 ]", ( ) => {
+
+			assert.deepEqual( phlat( [ 1, 2, 3, [ 4, 5, 6 ] ] ), [ 1, 2, 3, 4, 5, 6 ] );
+
+		} );
+	} );
+
+	describe( "`phlat( [ 1, 2, 3, [ 4, 5, 6 ], [ [ [ null ] ] ] ] )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, 5, 6, null ]", ( ) => {
+
+			assert.deepEqual( phlat( [ 1, 2, 3, [ 4, 5, 6 ], [ [ [ null ] ] ] ] ),
+				[ 1, 2, 3, 4, 5, 6, null ] );
+
+		} );
+	} );
+
 } );
 
 //: @end-client
@@ -86,6 +153,73 @@ describe( "phlat", ( ) => {
 //: @bridge:
 
 describe( "phlat", ( ) => {
+
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
+
+	describe( "`phlat( )`", ( ) => {
+		it( "should be equal to empty array", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return JSON.stringify( phlat( ) );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ ] );
+
+		} );
+	} );
+
+	describe( "`phlat( [ ] )`", ( ) => {
+		it( "should be equal to empty array", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return JSON.stringify( phlat( [ ] ) );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ ] );
+
+		} );
+	} );
+
+	describe( "`phlat( [ 1, 2, 3, [ 4, 5, 6 ] ] )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, 5, 6 ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return JSON.stringify( phlat( [ 1, 2, 3, [ 4, 5, 6 ] ] ) );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ 1, 2, 3, 4, 5, 6 ] );
+
+		} );
+	} );
+
+	describe( "`phlat( [ 1, 2, 3, [ 4, 5, 6 ], [ [ [ null ] ] ] ] )`", ( ) => {
+		it( "should be equal to [ 1, 2, 3, 4, 5, 6, null ]", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return JSON.stringify( phlat( [ 1, 2, 3, [ 4, 5, 6 ], [ [ [ null ] ] ] ] ) );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ 1, 2, 3, 4, 5, 6, null ] );
+
+		} );
+	} );
+
 } );
 
 //: @end-bridge
